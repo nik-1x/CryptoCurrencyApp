@@ -20,8 +20,8 @@
 </body>
 <script>
 
-    window.Telegram.WebApp.initData();
-    let query_id = new URLSearchParams(window.Telegram.WebApp.initData).get('query_id');
+    let data = window.Telegram.WebApp.initData;
+    let query_id = new URLSearchParams(data).get('query_id');
 
     let MBtn = window.Telegram.WebApp.MainButton;
     MBtn.text = 'Добавить токен';
