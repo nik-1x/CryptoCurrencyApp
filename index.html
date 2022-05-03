@@ -25,9 +25,7 @@
     MBtn.show();
     MBtn.onClick(() => {
         console.log("Button clicked");
-        window.Telegra.WebApp.sendData({
-            "test": 1
-        });
+        window.Telegra.WebApp.sendData('test');
         console.log("Button unclicked");
     })
 
