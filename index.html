@@ -20,14 +20,19 @@
 </body>
 <script>
 
+    window.Telegram.WebApp.initData();
+    let query_id = new URLSearchParams(window.Telegram.WebApp.initData).get('query_id');
+
     let MBtn = window.Telegram.WebApp.MainButton;
     MBtn.text = 'Добавить токен';
     MBtn.show();
     MBtn.onClick(() => {
         console.log("Button clicked");
-        window.Telegram.WebApp.sendData('test');
         window.Telegram.WebApp.sendData({
-            "test": 1
+            "web_app_query_id": query_id,
+            "result": {
+                "test": 1
+            }
         });
         console.log("Button unclicked");
     })
